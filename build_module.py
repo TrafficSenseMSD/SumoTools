@@ -1,17 +1,40 @@
 import shutil
 import os
 
+def copytree(src, dst, symlinks=False, ignore=None):
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, symlinks, ignore)
+        else:
+            shutil.copy2(s, d)
+
 def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     os.chdir(dir_path)
 
-    print("Building TraCI module")
-    src_files = os.listdir('sumo/tools/traci/')
-    for file_name in src_files:
-        full_file_name = os.path.join('sumo/tools/traci/', file_name)
-        if (os.path.isfile(full_file_name)):
-            print("copying...%s to ./traci" % full_file_name)
-            shutil.copy(full_file_name, './traci')
+    print("Building sumo_tools packages")
+    src_files = os.listdir('sumo/tools')
+
+    shutil.rmtree('sumolib', ignore_errors=True)
+    shutil.copytree('sumo/tools/sumolib', 'sumolib')
+
+    shutil.rmtree('traci', ignore_errors=True)
+    shutil.copytree('sumo/tools/traci', 'traci')
+
+    shutil.rmtree('scripts', ignore_errors=True)
+    os.mkdir('scripts')
+    open('scripts/__init__.py', 'w').close()
+
+    shutil.copytree('sumo/tools/shapes', 'scripts/shapes/')
+    #open('scripts/shapes/__init__.py', 'w').close()
+
+    shutil.copytree('sumo/tools/xml', 'scripts/xml/')
+
+    shutil.copytree('sumo/tools/visualization', 'scripts/visualization/')
+    shutil.copytree('sumo/tools/output', 'scripts/output/')
+
 
 
 if __name__ == "__main__":

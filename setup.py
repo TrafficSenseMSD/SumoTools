@@ -12,9 +12,9 @@ with open('requirements.txt') as f:
 
 setup(
     install_requires=required,
-    name="sumo_traci",
+    name="sumotools",
     version="0.01",
-    description="Redistribution of the SUMO TraCI source madules for use in the TrafficSenseMSD project",
+    description="Redistribution of the SUMO tools modules for use in the TrafficSenseMSD project",
     author="",
-    packages=['traci']
+    packages=['sumolib', 'traci']
 )
