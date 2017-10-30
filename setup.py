@@ -16,5 +16,5 @@ setup(
     version="0.01",
     description="Redistribution of the SUMO tools modules for use in the TrafficSenseMSD project",
     author="",
-    packages=['sumolib', 'traci']
+    packages=['sumotools']
 )
