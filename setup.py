@@ -2,6 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
@@ -13,11 +14,11 @@ def read(fname):
 setup(
     # install_requires=required,
     name="sumotools",
-    version="0.5",
+    version="0.6.1",
     description="Redistribution of the SUMO tools modules for use in the TrafficSenseMSD project",
     author="TrafficSenseMSD",
     packages=find_packages(),
     url='https://github.com/TrafficSenseMSD/SumoTools',
     keywords=['sumo', 'traffic', 'simulation'],
-    python_requires='>=3.5',
+    python_requires='>=3.5'
 )
