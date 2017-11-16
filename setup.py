@@ -10,11 +10,10 @@ def read(fname):
 # with open('requirements.txt') as f:
 #     required = f.read().splitlines()
 
-
 setup(
     # install_requires=required,
     name="sumotools",
-    version="0.6.1",
+    version="0.7.1",
     description="Redistribution of the SUMO tools modules for use in the TrafficSenseMSD project",
     author="TrafficSenseMSD",
     packages=find_packages(),
