@@ -4,9 +4,10 @@ python:
 sudo: false
 git:
   submodules: false
-before_install:
-- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-- git submodule update --init --recursive
+#before_install:
+#- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+#- git submodule update --init --recursive
+
 script: echo "done"
 deploy:
   provider: pypi
@@ -14,4 +15,4 @@ deploy:
   on:
     branch: master
   password:
-    secure: bWGYC/BbkIUokQ0DABRRvAmRmlqQImkVbVZBwnbBj/R1HGpBwygMGVIfryjv9pf+RW4hUAumPfY8FYpuoDj+/TL9bKJxcGkwZFWUsVlLar1fSUjKUHFuCFfhJQ6aZP+Nvwnnj6dZTr3vREptgM9QZDBhMYOYwQ4vnDIRmNPiypyMsUGkHe3D9EJ9yiwtfSD2GUAdjjo3xZxTOVw5gciHcRaV2gtGnTYFlHVkRTOpVbrUpiSMfrlgmhpXWpR0tklGQiEKwFsk+wqYBs3x1A1NhrV2u3pQ63RcehdmwIuKbhDR8EW0veBBfkYpGn7/ITjQFL7+iFmuBMcKZc3ub2C4im4Hnqoi8kyGuONTbNJQo3RRJB7DPEYBki1pxS3DeMDu88zn6H4iUqfcFOoNvgK4dwU5opvQJXw+0f+69tnFzbdsO2ExnVxGMkd/ccuXRgdcj6JK4Irca33Al4pD8WlOtqvAVYlsp7QKlKVsSTld9xxG43VUTj3koiCTFguqp2scm58KEnOyLRYCbwEJUxRqKVxgIH4lOf1Cmn0t2pD56AEIJgHzQ5RW5dAolv0xcmk52ZZHPdPYCtM35ySpk3ekOMjveU6wWZ+36dMxdTVHeHc24heUcVfGBtjAUGvmPTrlQgozTmphNo0M6Sgs311IVActnjLcJhDcTq+9uR8pVp0=
+    secure: EMkxdeMPmmVo5JQcUYVCRISDgsBHzlwKjB+qE/pU+ikNjLda+dvEjpYZn7AJgB66UzeQmRcoYRGzeXCY3M2ezfKsd4ri1HiK1kH3gZYeh//v6MyDLGbNpgHLEe4xvVInDmAtFxB/KuCNvZT6Soqbx1mmNfUTicFqgfKtaLKz51TKwj7Md4AFwaTSDWO95lZm5lqv8LkW9+LsQ/CKUJzPChZ/YgBcMuLPkkhDK86AYPe556CuclOdSXKw+4NJrumh0FF4Mm8drDOEHQiHdMe7wNtyZ274j+fPEi1oGfudINk9+FDID16XTg9EfMwXFFFaKzNdcGWBW85dCGTg/QUaQnZhvoaJk+kfsjZCe847WLrBMmAxEFfX38BXh80J1ryBe64RQc63MM3UPvfKIEIZbryNrP0ur/z4kKsfrawXSwgrXPFDIPAGnl5c2R6H4NflKIKOwLLCPCtebN39sqvipJRA1OOQE1KPPkq5hvdAJAiu64uq7QGYGZrXhfZpsNzc09u7bhv4+uDGIBjscH2GELsJR1xpeZbi81HSyO4+awKo11pRWPZxo/mNBZRMIzGAFcGLFOjyikql58MLsJ/Bdy2aTKx4tqHCKiAcBZ8iqc8Y/G4rTV7pL0L/Pd9v1WJkJA9X0tJ4c4mvSxYvUFl3jFLrTIjsfhPVVnwxs4VgwSQ=
