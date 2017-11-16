@@ -13,9 +13,9 @@ with open('requirements.txt') as f:
 setup(
     install_requires=required,
     name="sumotools",
-    version="0.01",
+    version="0.02",
     description="Redistribution of the SUMO tools modules for use in the TrafficSenseMSD project",
-    author="",
+    author="TrafficSenseMSD",
     packages=['sumotools'],
     url='https://github.com/TrafficSenseMSD/SumoTools',
     keywords=['sumo', 'traffic', 'simulation']
