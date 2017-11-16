@@ -1,20 +1,17 @@
 language: python
 python:
-  - "3.6"
-
+- '3.6'
 sudo: false
-# Handle git submodules yourself
 git:
-    submodules: false
-# Use sed to replace the SSH URL with the public URL, then initialize submodules
+  submodules: false
 before_install:
-    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-    - git submodule update --init --recursive
+- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+- git submodule update --init --recursive
 script: echo "done"
 deploy:
   provider: pypi
-  user: "trafficsense"
-  password: "0TmIZxCzh9#69mjQq5&pe"
+  user: trafficsense
   on:
     branch: master
-
+  password:
+    secure: YZGpBHA/+yBg0nBXs5GmAnXKZya2znRQbPWe4B8xHmzntCQC5KHed1sl9DWC2k4CefBKp7AF3wxJw0CBCFud/Pzqp2W1o+8pswlLvxHvxV7sIyAgosTVBCkSHgEwk7CLowkUSIEjIXtl+EurspUpVj6lb2VWnTPk+nFWRSt/S63XvvrzczzAVAz4ZV5ELpdWv94ougYIFSHoRi/MW9s7rKW6rcxG8CTUFJUlCOCe32CSru1OdHF8lwxY3r+R5f8UCHWTbzt69jEfRBQyYre7OD+fqJOvqA1Ulz3lOW8OfRZ0Pzu9WLxJzyouGucvp+WY/alwcli3IHdTbP7YowYtKMQX680Z+EtClqM6cGzA4rJIynStyhn2QicmEuc9O0Pfsv/gAw7Z3/P2dQeCzlmoJQLGql5AYzyR900GPqS7GNJZoOU1qd6PcPImTRZyWNdFBnVDFKTho6bcnJErFR1jX0Cz3gRJZ9Yb5NVWoDQ+C1gxAlTKRLj50/dJVazqmVcPm821NbyXlNtFrrUZAGlgv3Q9NkaRuRdfP/0G8up6mCzlonaJkFlMXADYlgJV4Ki6TkshRgDqI+OUJpYqk6bNU1lk+kkn0MFwAaCfkV83Jf8OhtD6pTDnyIpnwi31N/WEFKKXgnQPq9C3Y4ezed0i8DEhlOCydOakoXOvL2JUqNg=
