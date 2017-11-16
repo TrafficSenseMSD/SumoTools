@@ -1,0 +1,4 @@
+deploy:
+  provider: pypi
+  user: "trafficsense"
+  password: "0TmIZxCzh9#69mjQq5&pe"

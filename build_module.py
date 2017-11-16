@@ -17,23 +17,22 @@ def main():
     print("Building sumo_tools packages")
     src_files = os.listdir('sumo/tools')
 
-    shutil.rmtree('sumolib', ignore_errors=True)
-    shutil.copytree('sumo/tools/sumolib', 'sumolib')
+    shutil.rmtree('sumotools', ignore_errors=True)
+    os.mkdir('sumotools')
+    open('sumotools/__init__.py', 'w').close()
+    shutil.copytree('sumo/tools/sumolib', 'sumotools/sumolib')
 
-    shutil.rmtree('traci', ignore_errors=True)
-    shutil.copytree('sumo/tools/traci', 'traci')
+    shutil.copytree('sumo/tools/traci', 'sumotools/traci')
 
-    shutil.rmtree('scripts', ignore_errors=True)
-    os.mkdir('scripts')
-    open('scripts/__init__.py', 'w').close()
+    os.mkdir('sumotools/scripts')
 
-    shutil.copytree('sumo/tools/shapes', 'scripts/shapes/')
+    shutil.copytree('sumo/tools/shapes', 'sumotools/scripts/shapes/')
     #open('scripts/shapes/__init__.py', 'w').close()
 
-    shutil.copytree('sumo/tools/xml', 'scripts/xml/')
+    shutil.copytree('sumo/tools/xml', 'sumotools/scripts/xml/')
 
-    shutil.copytree('sumo/tools/visualization', 'scripts/visualization/')
-    shutil.copytree('sumo/tools/output', 'scripts/output/')
+    shutil.copytree('sumo/tools/visualization', 'sumotools/scripts/visualization/')
+    shutil.copytree('sumo/tools/output', 'sumotools/scripts/output/')
 
 
 
