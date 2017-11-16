@@ -18,5 +18,6 @@ setup(
     author="TrafficSenseMSD",
     packages=find_packages(),
     url='https://github.com/TrafficSenseMSD/SumoTools',
-    keywords=['sumo', 'traffic', 'simulation']
+    keywords=['sumo', 'traffic', 'simulation'],
+    python_requires='>=3.5',
 )
