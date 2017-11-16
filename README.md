@@ -1,7 +1,7 @@
 # SumoTools
 Installable distribution of the SUMO tools
 
-[![Build Status](https://travis-ci.org/TrafficSenseMSD/SumoTools.svg?branch=master)](https://travis-ci.org/TrafficSenseMSD/SumoTools.svg?branch=master)
+[![Build Status](https://travis-ci.org/TrafficSenseMSD/SumoTools.svg?branch=master)](https://travis-ci.org/TrafficSenseMSD/SumoTools)
 
 https://travis-ci.org/TrafficSenseMSD/SumoTools.svg?branch=master
 ## Included Packages
