@@ -10,10 +10,11 @@ git:
 before_install:
     - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     - git submodule update --init --recursive
-
+script: echo "done"
 deploy:
   provider: pypi
   user: "trafficsense"
   password: "0TmIZxCzh9#69mjQq5&pe"
   on:
     branch: master
+
