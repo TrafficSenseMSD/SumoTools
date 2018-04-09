@@ -13,7 +13,7 @@ def read(fname):
 setup(
     # install_requires=required,
     name="sumotools",
-    version="0.7.1",
+    version="0.7.2",
     description="Redistribution of the SUMO tools modules for use in the TrafficSenseMSD project",
     author="TrafficSenseMSD",
     packages=find_packages(),
